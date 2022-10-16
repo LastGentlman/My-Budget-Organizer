@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div `
     margin: 2em auto;
-    max-width: 500px;
+    max-width: 800px;
     height: auto;
     text-align: center;
     user-select: none;
@@ -17,7 +17,7 @@ export const Container = styled.div `
         margin: 5px 20px;
     }
 
-    & button {
+    & .button {
         height: 45px;
         width: 175px;
         color: white;
@@ -27,5 +27,7 @@ export const Container = styled.div `
         margin: 0 0 5px 0;
         border: 1px brown solid;
         border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
     }
 `

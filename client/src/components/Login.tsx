@@ -1,8 +1,11 @@
 import { Container } from '../styles/login.style'
-
+import axios from 'axios'
+import { useState } from 'react'
 interface props {
     eng: boolean,
 }
+
+// request to api login
 
 const Login:React.FC <props> = ({eng}) => {
 
@@ -14,9 +17,9 @@ const Login:React.FC <props> = ({eng}) => {
             <p>{eng ? 'Personal Budget Admin app' : 'Administracion de presupuesto personal'}</p>
             <p>{eng ? 'Financial Culture App' : 'App de educacion financiera'}</p>
             <hr />
-            <button>
+            <a className="button" href='./auth/google'>
                 <i className="fab fa-google"></i> Access
-            </button>
+            </a>
         </Container>
     )
 }

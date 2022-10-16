@@ -1,4 +1,4 @@
-import { Main } from '../styles/dashboard.style'
+import { Main, IncomeBtn, ExpenseBtn } from '../styles/dashboard.style'
 
 interface props {
     eng: boolean,
@@ -13,12 +13,16 @@ const Dashboard:React.FC <props> = ({ eng }) => {
             <section>
                 <h1>{eng ? "Wellcome!" : "Bienvenido!"}</h1>
             </section>
+            <br/>
             <section>
-                <h5>Total Balance: {currency[0] + n}</h5>
-                <button>Income</button> <button>Expense</button>
+                <h5>{eng ? 'Total Balance' : 'Balance Total'}: {currency[0] + n}</h5>
+                <br/>
+                <IncomeBtn>{eng ? 'Income' : 'Ingreso'}</IncomeBtn>
+                <ExpenseBtn>{eng ? 'Expense' : 'Gasto'}</ExpenseBtn>
             </section>
+            <br/>
             <section>
-                <h5>{"< Last Transactions here />"}</h5>
+                <h5>{"< Last 10 Transactions here />"}</h5>
             </section>            
         </Main>
     )
