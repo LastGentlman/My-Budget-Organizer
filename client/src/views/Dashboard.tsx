@@ -1,13 +1,13 @@
-import { Main, IncomeBtn, ExpenseBtn } from '../styles/dashboard.style'
+import { Main, IncomeBtn, ExpenseBtn, LastTransactions } from '../styles/dashboard.style'
 
 interface props {
     eng: boolean,
+    currensy: string,
 }
-                        // dlr, euro, libra, yuan, rublo, rupia
-let currency: string[] = ['$', '€', '£', '¥', '₽', '₹']
+
 let n: number = 0.00
 
-const Dashboard:React.FC <props> = ({ eng }) => {
+const Dashboard:React.FC <props> = ({ eng, currensy }) => {
     return (
         <Main>
             <section>
@@ -15,15 +15,15 @@ const Dashboard:React.FC <props> = ({ eng }) => {
             </section>
             <br/>
             <section>
-                <h5>{eng ? 'Total Balance' : 'Balance Total'}: {currency[0] + n}</h5>
+                <h5>{eng ? 'Total Balance' : 'Balance Total'}: {currensy + n}</h5>
                 <br/>
                 <IncomeBtn>{eng ? 'Income' : 'Ingreso'}</IncomeBtn>
                 <ExpenseBtn>{eng ? 'Expense' : 'Gasto'}</ExpenseBtn>
             </section>
             <br/>
-            <section>
+            <LastTransactions>
                 <h5>{"< Last 10 Transactions here />"}</h5>
-            </section>            
+            </LastTransactions>
         </Main>
     )
 }

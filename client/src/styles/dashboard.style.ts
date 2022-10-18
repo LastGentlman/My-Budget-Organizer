@@ -29,3 +29,7 @@ export const ExpenseBtn = styled.button `
         cursor: pointer;
         margin-left: .5em;
 `
+
+export const LastTransactions = styled.section `
+
+`
